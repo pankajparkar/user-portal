@@ -20,3 +20,42 @@
     border-left: 0;
     border-right: 0;
 }
+
+/* User Details Page */
+
+/*Don't copy this part*/
+body{
+    margin-top: 20px;
+}
+
+/* Business Card Css Start */
+.business-card {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.profile-img {
+  height: 120px;
+  background: white;
+}
+.job {
+  color: #666666;
+  font-size: 17px;
+}
+.mail {
+  font-size: 16px;
+ }
+
+ .card-content {
+    padding: 0 50px 0 50px;
+ }
+ .edit-button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+ }
+
+ .edit-button .btn{
+    border-radius: 15px;
+ }
+/* Business Card Css End */

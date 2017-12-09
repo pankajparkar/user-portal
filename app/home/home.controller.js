@@ -21,12 +21,13 @@
         function openUserDetails(user){
             console.log(user)
             $uibModal.open({
-                template: '<up-user-details user="$resolve.user"></up-user-details>',
-                resolve: {
-                    user: function(){
-                        return user;
-                    }
-                }
+                size: 'md',
+                template: '<up-user-details user="$ctrl.user" close="$ctrl.close()"></up-user-details>',
+                controller: ['$uibModalInstance', function($uibModalInstance) {
+                    this.user = user;
+                    this.close = $uibModalInstance.close;
+                }],
+                controllerAs: '$ctrl'
             })
         }
 

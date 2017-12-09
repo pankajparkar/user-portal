@@ -1,4 +1,65 @@
-<div>
-    Test
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="business-card">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object img-circle profile-img"
+                            ng-src="{{userDetails.user.Gender.toLowerCase() == 'female' ? '/img/female-user.png': '/img/male-user.png'}}">
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{userDetails.user.FirstName}} {{userDetails.user.LastName}}</h2>
+                        <div class="job">{{userDetails.user.Gender}}</div>
+                        <div class="mail">{{userDetails.user.DateOfBirth}}</div>
+                    </div>
+                    <div class="edit-button">
+                        <button class="btn btn-sm">Edit</button>
+                    </div>
+                </div>
+                <hr/>
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Email Id</label>
+                        </div>
+                        <div class="col-sm-8">
+                            {{userDetails.user.Email}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Mobile Number</label>
+                        </div>
+                        <div class="col-sm-8">
+                            {{userDetails.user.Mobile}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Address</label>
+                        </div>
+                        <div class="col-sm-8">
+                            {{userDetails.user.Address}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Salary</label>
+                        </div>
+                        <div class="col-sm-8">
+                            {{userDetails.user.Salary}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Department</label>
+                        </div>
+                        <div class="col-sm-8">
+                            {{userDetails.user.Department}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{{userDetails.user}}
