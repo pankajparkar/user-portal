@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "User portal with simple crud operation",
   "scripts": {
+    "start": "http-server",
+    "http-server": "http-server"
   },
   "repository": {
     "type": "git",
@@ -12,6 +14,7 @@
     
   },
   "devDependencies": {
+    "http-server": "^0.10.0"
   },
   "keywords": [
     "portal"
