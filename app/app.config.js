@@ -12,7 +12,7 @@
                 name: 'home', 
                 definition: {
                     url: '/home',
-                    component: 'upHome'
+                    template: '<up-home></up-home>'
                 }
             }
         ]
@@ -23,11 +23,11 @@
     function ConfigBlock($stateProvider, $urlRouterProvider, $locationProvider){
         var states = getStates();
         states.forEach(function (state){
+            debugger
             $stateProvider.state(state.name, state.definition)
         });
-        console.log(states);
 
-        $urlRouterProvider.otherwise('/home');
+        //$urlRouterProvider.otherwise('/home');
         $locationProvider.hashPrefix('');
     }
 
