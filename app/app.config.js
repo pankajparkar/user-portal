@@ -23,11 +23,10 @@
     function ConfigBlock($stateProvider, $urlRouterProvider, $locationProvider){
         var states = getStates();
         states.forEach(function (state){
-            debugger
             $stateProvider.state(state.name, state.definition)
         });
 
-        //$urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/home');
         $locationProvider.hashPrefix('');
     }
 
