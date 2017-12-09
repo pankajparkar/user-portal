@@ -6,7 +6,7 @@
     LocalStorageService.$inject = [];
 
     function LocalStorageService(){
-        var localStorage = this;
+        var localStorageService = this;
         //TODO
     }
 
