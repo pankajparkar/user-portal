@@ -7,58 +7,20 @@
                     Users 
                 </h1>
             </div> 
-            <!-- <table class="table">
-                <thead>
-                    <tr>
-                        <th>User Details</th>
-                        <th>Contact Info</th>
-                        <th>Adress</th>
-                        <th>Salary Development</th>
-                        <th> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="user in home.users">
-                        <td>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <img class="user-img" src="http://lorempixel.com/40/40/people/1/">
-                                </div>
-                                <div class="col-sm-9">
-                                    <div>{{user.FirstName}} {{user.LastName}}</div>
-                                    <div>{{user.FirstName}} {{user.LastName}}</div>
-                                    <div>{{user.FirstName}} {{user.LastName}}</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            
-                        </td>
-                        <td>{{user.Address}}</td>
-                        <td>
-                            <div>{{user.Salary}}</div>
-                            <div>{{user.Department}}</div>
-                        </td>
-                        <td>
-                            <i class="glyphicon glyphicon-edit"></i>
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table> -->
-            <div class="row">
-                <div class="col-sm-2">User Details</div>
+            <div class="row user-list-header">
+                <div class="col-sm-3">User Details</div>
                 <div class="col-sm-3">Contact Info</div>
-                <div class="col-sm-3">Adress</div>
+                <div class="col-sm-3">Address</div>
                 <div class="col-sm-2">Salary Development</div>
-                <div class="col-sm-2"></div>
+                <div class="col-sm-1"></div>
             </div>
-            <div class="comments-list">
-                <div class="row" ng-repeat="user in home.users">
-                    <div class="col-sm-2">
+            <div class="user-list">
+                <div class="row user" ng-repeat="user in home.users">
+                    <div class="col-sm-3">
                         <div class="media">
                             <a class="media-left" href="#">
-                                <img src="http://lorempixel.com/40/40/people/1/">
+                                <img class="user-img" 
+                                    ng-src="{{user.Gender.toLowerCase() == 'female' ? '/img/female-user.png': '/img/male-user.png'}}">
                             </a>
                             <div class="media-body">
                                 <h6 class="media-heading user_name">{{user.FirstName}} {{user.LastName}}</h4>
@@ -75,10 +37,10 @@
                         {{user.Address}}
                     </div>
                     <div class="col-sm-2">
-                        <div>{{user.Salary}}</div>
+                        <div>&#8377; {{user.Salary | number: 0 }}</div>
                         <div>{{user.Department}}</div>                        
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <i class="glyphicon glyphicon-edit"></i>
                         <i class="glyphicon glyphicon-remove"></i>
                     </div>
