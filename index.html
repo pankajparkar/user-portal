@@ -2,9 +2,23 @@
 <html lang="en"> 
     <head> 
         <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-        <title>Title Goes Here</title> 
+        <title>User Portal</title> 
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
     </head> 
     <body> 
-        <p>Sample HTTP Page</p> 
+
+        <up-app>Splash screen loading...</up-app>
+
+        <!-- Third party plugin, later we can bundle together -->
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/node_modules/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+        <!-- Third party plugin, later we can bundle together -->
+        <script src="/app/app.js"></script>
+        <script src="/app/app.bootstrap.js"></script>
+        <script src="/app/app.component.js"></script>
+        <script src="/app/app.controller.js"></script>
+        <script src="/app/app.config.js"></script>
     </body> 
 </html>
