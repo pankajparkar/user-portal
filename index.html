@@ -8,7 +8,8 @@
     <body> 
 
         <up-app>Splash screen loading...</up-app>
-
+        <ui-view></ui-view>
+        
         <!-- Third party plugin, later we can bundle together -->
         <script src="/node_modules/angular/angular.js"></script>
         <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
@@ -20,5 +21,9 @@
         <script src="/app/app.component.js"></script>
         <script src="/app/app.controller.js"></script>
         <script src="/app/app.config.js"></script>
+
+        <!-- Home Component -->
+        <script src="/app/home/home.component.js"></script>
+        <script src="/app/home/home.controller.js"></script>
     </body> 
 </html>
