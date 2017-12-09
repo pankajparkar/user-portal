@@ -14,7 +14,6 @@
         userService.getUserById = getUserById;
 
         function getUsers(){
-            debugger
             return $http.get('/api/users.json')
                 .then(unWrapData)
                 .catch(catchError);

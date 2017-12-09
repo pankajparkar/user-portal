@@ -13,7 +13,6 @@
 
         function getUsers(){
             userService.getUsers().then(function(users){
-                debugger
                 home.users = users;
             });
         }
