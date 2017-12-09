@@ -1,10 +1,7 @@
 (function (){
     'use strict';
     angular.module('user-portal')
-    .config(ConfigBlock)
-    .run(function($state){
-
-    });
+        .config(ConfigBlock);
 
     function getStates(){
         return [
