@@ -11,14 +11,8 @@
         //methods
         home.$onInit = $onInit;
 
-        function getUsers(){
-            userService.getUsers().then(function(users){
-                home.users = users;
-            });
-        }
-
         function $onInit(){
-            getUsers();
+
         }
     }
 

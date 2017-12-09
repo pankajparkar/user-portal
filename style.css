@@ -6,6 +6,7 @@
 
 .user{
     padding: 15px;
+    border-bottom: 1px solid black;
 }
 
 .user-img {
@@ -16,4 +17,6 @@
 .user-list-header{
     padding: 2px 0px 2px 7px;
     border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
 }

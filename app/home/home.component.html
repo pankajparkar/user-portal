@@ -3,60 +3,10 @@
         <div class="col-sm-12">
             <div class="page-header">
                 <h1>
-                    <small class="pull-right" ng-if="home.users">{{home.users.length}} users</small>
                     Users 
                 </h1>
             </div> 
-            <div class="row user-list-header">
-                <div class="col-sm-3">User Details</div>
-                <div class="col-sm-3">Contact Info</div>
-                <div class="col-sm-3">Address</div>
-                <div class="col-sm-2">Salary Development</div>
-                <div class="col-sm-1"></div>
-            </div>
-            <div class="user-list">
-                <div class="row user" ng-repeat="user in home.users">
-                    <div class="col-sm-3">
-                        <div class="media">
-                            <a class="media-left" href="#">
-                                <img class="user-img" 
-                                    ng-src="{{user.Gender.toLowerCase() == 'female' ? '/img/female-user.png': '/img/male-user.png'}}">
-                            </a>
-                            <div class="media-body">
-                                <h6 class="media-heading user_name">{{user.FirstName}} {{user.LastName}}</h4>
-                                <div>{{user.Gender}}</div>
-                                <div>{{user.DateOfBirth}}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div>{{user.Email}}</div>
-                        <div>{{user.Mobile}}</div>
-                    </div>
-                    <div class="col-sm-3">
-                        {{user.Address}}
-                    </div>
-                    <div class="col-sm-2">
-                        <div>&#8377; {{user.Salary | number: 0 }}</div>
-                        <div>{{user.Department}}</div>                        
-                    </div>
-                    <div class="col-sm-1">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        <i class="glyphicon glyphicon-remove"></i>
-                    </div>
-                </div>
-                <!-- <div class="media" ng-repeat="user in home.users">
-                    <p class="pull-right"><small>5 days ago</small></p>
-                    <a class="media-left" href="#">
-                        <img src="http://lorempixel.com/40/40/people/1/">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading user_name">{{user.FirstName}} {{user.LastName}}</h4>
-                        Wow! this is really great.
-                        <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
-                    </div>
-                </div> -->
-            </div>
+            <up-user-list></up-user-list>
         </div>
     </div>
 </div>
