@@ -3,7 +3,7 @@
     <head> 
         <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
         <title>User Portal</title> 
-        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="/style.css" rel="stylesheet"/>
     </head> 
     <body> 
@@ -11,9 +11,9 @@
         <up-app>Splash screen loading...</up-app>
 
         <!-- Third party plugin, later we can bundle together -->
-        <script src="/node_modules/angular/angular.js"></script>
-        <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="/node_modules/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="/node_modules/angular/angular.min.js"></script>
+        <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
         <!-- Third party plugin, later we can bundle together -->
         <script src="/app/app.js"></script>
@@ -27,20 +27,24 @@
         <script src="/app/services/localStorage.service.js"></script>
         <script src="/app/services/user.service.js"></script>
 
-        <!-- Home Component -->
-        <script src="/app/home/home.component.js"></script>
-        <script src="/app/home/home.controller.js"></script>
-
         <!-- Navbar Component -->
         <script src="/app/navbar/navbar.component.js"></script>
         <script src="/app/navbar/navbar.controller.js"></script>
+
+        <!-- FilterBy Component -->
+        <script src="/app/filter-by/filter-by.component.js"></script>
+        <script src="/app/filter-by/filter-by.controller.js"></script>
+
+        <!-- Home Component -->
+        <script src="/app/home/home.component.js"></script>
+        <script src="/app/home/home.controller.js"></script>
 
         <!-- UserList Component -->
         <script src="/app/user-list/user-list.component.js"></script>
         <script src="/app/user-list/user-list.controller.js"></script>
 
-        <!-- FilterBy Component -->
-        <script src="/app/filter-by/filter-by.component.js"></script>
-        <script src="/app/filter-by/filter-by.controller.js"></script>
+        <!-- Navbar Component -->
+        <script src="/app/user-details/user-details.component.js"></script>
+        <script src="/app/user-details/user-details.controller.js"></script>
     </body> 
 </html>

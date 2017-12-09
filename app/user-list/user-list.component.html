@@ -9,7 +9,7 @@
     <div class="row user" ng-repeat="user in userList.users">
         <div class="col-sm-3">
             <div class="media">
-                <a class="media-left" href="#">
+                <a class="media-left" href="" ng-click="userList.showUserDetails({user: user})">
                     <img class="user-img" 
                         ng-src="{{user.Gender.toLowerCase() == 'female' ? '/img/female-user.png': '/img/male-user.png'}}">
                 </a>

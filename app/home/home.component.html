@@ -1,16 +1,28 @@
-<!-- <div class="page-header">
-    <h1>
-        Users 
-    </h1>
-</div>  -->
+<div class="page-header">
+    
+    <div class="row">
+        <div class="col-sm-2">
+            <h4>
+                Employee List
+            </h4>
+        </div>
+        <div class="col-sm-10">
+            <button class="btn btn-success pull-right" ng-click="home.openUserDetails()">
+                Add User
+            </button>
+        </div>
+    </div>
+</div> 
 <div class="container">
     <div class="row">
         <up-filter-by></up-filter-by>
     </div>
     <div class="row">
         <div class="col-sm-12">
-
-            <up-user-list></up-user-list>
+            <up-user-list 
+                users="home.users"
+                show-user-details="home.openUserDetails(user)">
+            </up-user-list>
         </div>
     </div>
 </div>

@@ -3,22 +3,15 @@
     angular.module('user-portal')
     .controller('UserListController', UserListController);
     
-    UserListController.$inject = ['UserService'];
+    UserListController.$inject = [];
 
-    function UserListController(userService){
+    function UserListController(){
         var userList = this;
 
         //methods
         userList.$onInit = $onInit;
 
-        function getUsers(){
-            userService.getUsers().then(function(users){
-                userList.users = users;
-            });
-        }
-
         function $onInit(){
-            getUsers();
         }
     }
 

@@ -6,7 +6,8 @@
         controller: 'UserListController',
         controllerAs: 'userList',
         bindings: {
-            users: '<'
+            users: '<',
+            showUserDetails: '&'
         }
     });
     
