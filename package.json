@@ -1,0 +1,25 @@
+{
+  "name": "user-portal",
+  "version": "1.0.0",
+  "description": "User portal with simple crud operation",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajparkar/user-portal.git"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "portal"
+  ],
+  "author": "Pankaj Parkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankajparkar/user-portal/issues"
+  },
+  "homepage": "https://github.com/pankajparkar/user-portal#readme"
+}
