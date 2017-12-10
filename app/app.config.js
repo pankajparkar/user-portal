@@ -12,15 +12,21 @@
                     template: '<up-home></up-home>'
                 }
             },{ 
-                name: 'details', 
+                name: 'user-edit', 
                 definition: {
-                    url: '/details/{id:int}',
+                    url: '/user/edit/{id:int}',
                     template: '<up-user-edit user="$resolve.user"></up-user-edit>',
                     resolve: {
                         user: ['UserService', '$stateParams', function(userService, $stateParams){
                             return userService.getUserById($stateParams.id)
                         }]
                     }
+                }
+            },{ 
+                name: 'user-add', 
+                definition: {
+                    url: '/user/add',
+                    template: '<up-user-edit user="{}"></up-user-edit>'
                 }
             }
         ]

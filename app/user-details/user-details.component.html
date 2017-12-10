@@ -13,7 +13,9 @@
                         <div class="mail">{{userDetails.user.DateOfBirth}}</div>
                     </div>
                     <div class="edit-button">
-                        <button class="btn btn-sm">Edit</button>
+                        <button class="btn btn-sm" ng-click="userDetails.redirect(userDetails.user.Id)">
+                            Edit
+                        </button>
                     </div>
                 </div>
                 <hr/>
