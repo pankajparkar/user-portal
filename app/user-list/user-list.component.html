@@ -14,9 +14,9 @@
                         ng-src="{{user.Gender.toLowerCase() == 'female' ? '/img/female-user.png': '/img/male-user.png'}}">
                 </a>
                 <div class="media-body">
-                    <h6 class="media-heading user_name">{{user.FirstName}} {{user.LastName}}</h4>
-                    <div>{{user.Gender}}</div>
-                    <div>{{user.DateOfBirth}}</div>
+                    <div class="media-heading user_name">{{user.FirstName}} {{user.LastName}}</div>
+                    <div><small>{{user.Gender}}</small></div>
+                    <div><small>{{user.DateOfBirth}}</small></div>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div>{{user.Department}}</div>                        
         </div>
         <div class="col-sm-1">
-            <i class="glyphicon glyphicon-edit"></i>
+            <a ui-sref="details({id: user.Id})"><i class="glyphicon glyphicon-edit"></i></a>
             <i class="glyphicon glyphicon-remove"></i>
         </div>
     </div>

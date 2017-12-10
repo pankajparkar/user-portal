@@ -6,10 +6,21 @@
     function getStates(){
         return [
             { 
-                name: 'home', 
+                name: 'user', 
                 definition: {
-                    url: '/home',
+                    url: '/user',
                     template: '<up-home></up-home>'
+                }
+            },{ 
+                name: 'details', 
+                definition: {
+                    url: '/details/{id:int}',
+                    template: '<up-user-edit user="$resolve.user"></up-user-edit>',
+                    resolve: {
+                        user: ['UserService', '$stateParams', function(userService, $stateParams){
+                            return userService.getUserById($stateParams.id)
+                        }]
+                    }
                 }
             }
         ]
@@ -23,7 +34,7 @@
             $stateProvider.state(state.name, state.definition)
         });
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/user');
         $locationProvider.hashPrefix('');
     }
 

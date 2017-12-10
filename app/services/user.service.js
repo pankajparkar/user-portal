@@ -20,11 +20,16 @@
         }
 
         function saveUser(){
-            //modify local data here
+            //TODO: modify local data here, localSToragee
         }
 
-        function getUserById(){
-            //retrieve from localStorage and lookup by id
+        function getUserById(id){
+            //TODO: retrieve from localStorage and lookup by id
+            return getUsers().then(function(users){
+                return users.filter(function(user){
+                    return user.Id == id;
+                })[0];
+            })
         }
 
         function catchError(response){
