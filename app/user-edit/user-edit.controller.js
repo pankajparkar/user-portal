@@ -4,9 +4,9 @@
     angular.module('user-portal')
     .controller('UserEditController', UserEditController);
     
-    UserEditController.$inject = ['UserService'];
+    UserEditController.$inject = ['UserService', '$state'];
 
-    function UserEditController(userService){
+    function UserEditController(userService, $state){
         var userEdit = this;
 
         //methods
@@ -21,6 +21,12 @@
             });
         }
 
+        function removeUser(){
+            //TODO: remove user logic
+            alert("Data deleted successfully.")
+            $state.go('user');
+        }
+
         function save(){
             if(userEdit.userForm.$valid) {
                 userService.saveUser();
@@ -30,7 +36,7 @@
         }
 
         function requiredValidation(field){
-            return userEdit.userForm.$submitted && field.$dirty && field.$invalid;
+            return userEdit.userForm.$submitted && field.$error.required;
         }
 
         function $onInit(){

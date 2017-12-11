@@ -1,139 +1,154 @@
-<div class="row">
-    <form name="userEdit.userForm" novalidate ng-submit="userEdit.save()" autocomplete="off">
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <label>
-                                First Name*
-                            </label>
-                        </div>
-                        <div class="col-sm-12">
-                            <input name="firstName" ng-model="userEdit.user.FirstName" required/>
-                        </div>
-                        <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.firstName)">
-                            <div class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                <span class="sr-only">Error:</span>
-                                First Name is required
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <label>
-                                Last Name*
-                            </label>
-                        </div>
-                        <div class="col-sm-12">
-                            <input name="lastName" ng-model="userEdit.user.LastName" required/>
-                        </div>
-                        <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.lastName)">
-                            <div class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                <span class="sr-only">Error:</span>
-                                Last Name is required
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="media">
+                <a class="media-left" href="" ng-click="userList.showUserDetails({user: user})">
+                    <img ng-if="userEdit.user.Gender.toLowerCase() == 'female'" class="user-img" src="/img/female-user.png">
+                    <img ng-if="userEdit.user.Gender.toLowerCase() == 'male'" class="user-img" src="/img/male-user.png">
+                </a>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>
-                        Gender*
-                    </label>
-                    <div class="btn-group">
-                        <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Male'">Male</label>
-                        <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Female'">Female</label>
+        </div>
+        <div class="col-sm-8">
+            <form name="userEdit.userForm" novalidate ng-submit="userEdit.save()" autocomplete="off">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label>
+                                    First Name*
+                                </label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input name="firstName" ng-model="userEdit.user.FirstName" required/>
+                            </div>
+                            <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.firstName)">
+                                <div class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span>
+                                    First Name is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.gender)">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label>
+                                    Last Name*
+                                </label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input name="lastName" ng-model="userEdit.user.LastName" required/>
+                            </div>
+                            <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.lastName)">
+                                <div class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span>
+                                    Last Name is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>
+                            Gender*
+                        </label>
+                        <div class="btn-group">
+                            <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Male'">Male</label>
+                            <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Female'">Female</label>
+                        </div>
+                        <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.gender)">
+                            <div class="alert alert-danger" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>
+                                Gender is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Date of Birth*</label>
+                        <!-- TODO: Conver it to dropdown -->
+                        <input type="date" placeholder="Date of birth"/>
+                    </div>
+                    <!-- <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.dateOfBirth)">
                         <div class="alert alert-danger" role="alert">
                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                             <span class="sr-only">Error:</span>
-                            Gender is required
+                            Date of Birth is required
+                        </div>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Email Id*</label>
+                        <input type="email" name="email" class="form-control" ng-model="userEdit.user.Email" required />
+                    </div>
+                    <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.email)">
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Email is required
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Date of Birth*</label>
-                    <select></select>
-                    <select></select>
-                    <select></select>
-                </div>
-                <!-- <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.DateOfBirth)">
-                    <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        Date of Birth is required
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Mobile Number</label>
+                        <input type="tel" name="mobile" class="form-control" ng-model="userEdit.user.Mobile" required />
                     </div>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Email Id*</label>
-                    <input type="email" name="email" class="form-control" ng-model="userEdit.user.Email" required />
-                </div>
-                <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.email)">
-                    <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        Email is required
+                    <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.mobile)">
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Mobile Number is required
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Mobile Number</label>
-                    <input type="tel" name="mobile" class="form-control" ng-model="userEdit.user.Mobile" required />
-                </div>
-                <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.mobile)">
-                    <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        Mobile Number is required
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Address</label>
+                        <textarea name="address" class="form-control" rows="3" ng-model="userEdit.user.Address" required></textarea>
+                    </div>
+                    <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.address)">
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Address is required
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Address</label>
-                    <textarea name="address" class="form-control" rows="3" ng-model="userEdit.user.Address" required></textarea>
-                </div>
-                <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.address)">
-                    <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        Address is required
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label>Current Salary</label>
+                        <input class="form-control" type="number" ng-model="userEdit.user.Salary" required />
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Current Salary</label>
-                    <input class="form-control" type="number" ng-model="userEdit.user.Salary" required />
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Department</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <select name="department" ng-model="userEdit.user.Department"
+                            ng-options="department.Name as department.Name for department in userEdit.departments track by department.Name" required>
+                            <option>Please select Department</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <label>Department</label>
+                <div class="row">
+                    <button type="submit">Save</button>
+                    <button ui-sref="user">Cancel</button>
                 </div>
-                <div class="col-sm-8">
-                    <select name="department" ng-model="userEdit.user.Department"
-                        ng-options="department.Name as department.Name for department in userEdit.departments track by department.Name" required>
-                        <option>Please select Department</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <button type="submit">Save</button>
-                <button ui-sref="user">Cancel</button>
-            </div>
+            </form>
         </div>
-    </form>
+        <div class="col-sm-2" ng-if="userEdit.user.Id">
+            <button class="btn btn-danger" ng-click="userEdit.removeUser(user)">
+                Delete
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+        </div>
+    </div>
 </div>
