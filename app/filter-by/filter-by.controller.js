@@ -10,9 +10,20 @@
 
         //methods
         filterBy.$onInit = $onInit;
+        filterBy.filterChanged = filterChanged;
+
+        function getDepartment(){
+            userService.getUserDepartment().then(function(departments){
+                filterBy.departments = departments;
+            });
+        }
+
+        function filterChanged(){
+            filterBy.updateFilter({filter: filterBy.filter});
+        }
 
         function $onInit(){
-
+            getDepartment();
         }
     }
 

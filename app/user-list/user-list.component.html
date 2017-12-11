@@ -36,4 +36,9 @@
             <i class="glyphicon glyphicon-remove"></i>
         </div>
     </div>
+    <div ng-if="!userList.users.length" class="row alert alert-danger user" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        No user(s)
+    </div>
 </div>
