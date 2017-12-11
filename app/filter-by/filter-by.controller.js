@@ -11,6 +11,7 @@
         //methods
         filterBy.$onInit = $onInit;
         filterBy.filterChanged = filterChanged;
+        filterBy.sortingChange = sortingChange;
 
         function getDepartment(){
             userService.getUserDepartment().then(function(departments){
@@ -20,6 +21,11 @@
 
         function filterChanged(){
             filterBy.updateFilter({filter: filterBy.filter});
+        }
+
+        function sortingChange(){
+            filterBy.filter.Salary = !filterBy.filter.Salary;
+            filterChanged();
         }
 
         function $onInit(){

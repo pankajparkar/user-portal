@@ -6,6 +6,7 @@
         controller: 'FilterByController',
         controllerAs: "filterBy",
         bindings: {
+            filter: '<',
             updateFilter: '&'
         }
     });

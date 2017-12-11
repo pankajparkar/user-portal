@@ -11,7 +11,7 @@
             filterFn = $filter('filter'),
             orderByFn = $filter('orderBy');
 
-        home.filter = {};
+        home.filter = { Salary: true };
 
         //methods
         home.$onInit = $onInit;
