@@ -12,6 +12,7 @@
         userService.getUsers = getUsers;
         userService.saveUser = saveUser;
         userService.getUserById = getUserById;
+        userService.getUserDepartment = getUserDepartment;
 
         function getUsers(){
             return $http.get('/api/users.json')
@@ -30,6 +31,12 @@
                     return user.Id == id;
                 })[0];
             })
+        }
+
+        function getUserDepartment(){
+            return $http.get('/api/department.json')
+                .then(unWrapData)
+                .catch(catchError);
         }
 
         function catchError(response){

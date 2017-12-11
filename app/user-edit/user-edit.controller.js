@@ -15,7 +15,9 @@
         userEdit.save = save;
 
         function getDepartment(){
-            //TODO: 
+            userService.getUserDepartment().then(function(departments){
+                userEdit.departments = departments;
+            });
         }
 
         function save(){
@@ -24,7 +26,7 @@
         }
 
         function $onInit(){
-            console.log(userEdit);
+            getDepartment();
         }
     }
 

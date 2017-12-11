@@ -10,6 +10,7 @@
 
         //methods
         userList.$onInit = $onInit;
+        // userList.getDepartment = getDepartment;
 
         function $onInit(){
         }

@@ -1,0 +1,7 @@
+[
+    {"Id": 1, "Name": "Accounting", "Color": "yellow"},
+    {"Id": 1, "Name": "Engineering", "Color": "yellow"},
+    {"Id": 1, "Name": "Human Resources", "Color": "yellow"},
+    {"Id": 1, "Name": "Design", "Color": "yellow"},
+    {"Id": 1, "Name": "Marketing", "Color": "yellow"}
+]

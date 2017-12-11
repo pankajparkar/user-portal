@@ -8,7 +8,7 @@
         "Mobile": "91-7789 846 523",
         "Address": "B-wing, Unit-4, Krislon House, Military Road, Saki Naka, Andheri, 72",
         "Salary": 15400,
-        "Department": "Admin",
+        "Department": "Engineering",
         "Email": "leannegraham@example.com"
     },{
         "Id": 2,
@@ -19,7 +19,7 @@
         "Mobile": "91-7789846523",
         "Address": "B-wing, Unit-4, Krislon House, Military Road, Saki Naka, Andheri, 72",
         "Salary": 115400,
-        "Department": "Admin",
+        "Department": "Engineering",
         "Email": "leannegraham@example.com"
     },{
         "Id": 2,
@@ -30,7 +30,7 @@
         "Mobile": "91-7789846523",
         "Address": "B-wing, Unit-4, Krislon House, Military Road, Saki Naka, Andheri, 72",
         "Salary": 155400,
-        "Department": "Admin",
+        "Department": "Design",
         "Email": "leannegraham@example.com"
     },{
         "Id": 2,
@@ -41,7 +41,7 @@
         "Mobile": "91-7789846523",
         "Address": "B-wing, Unit-4, Krislon House, Military Road, Saki Naka, Andheri, 72",
         "Salary": 154500,
-        "Department": "Admin",
+        "Department": "Marketing",
         "Email": "leannegraham@example.com"
     }
 ]
