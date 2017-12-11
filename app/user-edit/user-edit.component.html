@@ -5,12 +5,13 @@
                 <a class="media-left" href="" ng-click="userList.showUserDetails({user: user})">
                     <img ng-if="userEdit.user.Gender.toLowerCase() == 'female'" class="user-img" src="/img/female-user.png">
                     <img ng-if="userEdit.user.Gender.toLowerCase() == 'male'" class="user-img" src="/img/male-user.png">
+                    <img ng-if="!userEdit.user.Gender.length" class="no-img user-img"/>
                 </a>
             </div>
         </div>
         <div class="col-sm-8">
             <form name="userEdit.userForm" novalidate ng-submit="userEdit.save()" autocomplete="off">
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-6">
                         <div class="row">
                             <div class="col-sm-12">
@@ -50,14 +51,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>
                             Gender*
                         </label>
                         <div class="btn-group">
-                            <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Male'">Male</label>
-                            <label class="btn btn-primary" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Female'">Female</label>
+                            <label class="btn btn-primary btn-sm" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Male'">Male</label>
+                            <label class="btn btn-primary btn-sm" name="gender" ng-model="userEdit.user.Gender" uib-btn-radio="'Female'">Female</label>
                         </div>
                         <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.gender)">
                             <div class="alert alert-danger" role="alert">
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Date of Birth*</label>
                         <!-- TODO: Conver it to dropdown -->
@@ -82,7 +83,7 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Email Id*</label>
                         <input type="email" name="email" class="form-control" ng-model="userEdit.user.Email" required />
@@ -95,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Mobile Number</label>
                         <input type="tel" name="mobile" class="form-control" ng-model="userEdit.user.Mobile" required />
@@ -108,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Address</label>
                         <textarea name="address" class="form-control" rows="3" ng-model="userEdit.user.Address" required></textarea>
@@ -121,13 +122,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Current Salary</label>
                         <input class="form-control" type="number" ng-model="userEdit.user.Salary" required />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <div class="col-sm-4">
                         <label>Department</label>
                     </div>
@@ -138,7 +139,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row margin-bottom-5">
                     <button type="submit">Save</button>
                     <button ui-sref="user">Cancel</button>
                 </div>

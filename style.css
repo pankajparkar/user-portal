@@ -56,3 +56,9 @@
 .margin-bottom {
     margin-bottom: 5px;
 }
+
+.no-img{
+    background: deepskyblue;
+    width: 80px;
+    height: 80px;
+}
