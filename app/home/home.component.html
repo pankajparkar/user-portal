@@ -1,4 +1,4 @@
-<div class="page-header">
+<div class="container-fluid">
     <div class="row">
         <div class="col-sm-2">
             <h4>
@@ -20,6 +20,7 @@
         <div class="col-sm-12">
             <up-user-list 
                 users="home.users"
+                remove-user="home.removeUser(user)"
                 show-user-details="home.openUserDetails(user)">
             </up-user-list>
         </div>

@@ -33,7 +33,7 @@
         </div>
         <div class="col-sm-1">
             <a ui-sref="user-edit({id: user.Id})"><i class="glyphicon glyphicon-edit"></i></a>
-            <i class="glyphicon glyphicon-remove"></i>
+            <i class="glyphicon glyphicon-remove" ng-click="userList.removeUser({user: user})"></i>
         </div>
     </div>
     <div ng-if="!userList.users.length" class="row alert alert-danger user" role="alert">

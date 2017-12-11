@@ -11,13 +11,13 @@
         </div>
     </form>
     <!-- TODO fix sequence -->
-    <div class="nav navbar-nav pull-right" ng-click="filterBy.sortingChange()">
-        <label>Salary</label>
+    <button class="btn nav navbar-nav pull-right" ng-click="filterBy.sortingChange()">
+        Salary
         <i class="glyphicon" ng-class="{
             'glyphicon-menu-down': filterBy.filter.Salary, 
             'glyphicon-menu-up': !filterBy.filter.Salary}"
         ></i>
-    </div>
+    </button>
     <ul class="nav navbar-nav navbar-right">
         <li>
             <select ng-model="filterBy.filter.Department" placeholder="Depeartment" ng-change="filterBy.filterChanged(filter)"

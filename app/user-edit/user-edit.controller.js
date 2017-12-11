@@ -12,6 +12,7 @@
         //methods
         userEdit.$onInit = $onInit;
         userEdit.getDepartment = getDepartment;
+        userEdit.requiredValidation = requiredValidation;
         userEdit.save = save;
 
         function getDepartment(){
@@ -21,8 +22,15 @@
         }
 
         function save(){
-            //TODO: 
-            userService.save();
+            if(userEdit.userForm.$valid) {
+                userService.saveUser();
+            }else {
+                alert('Please fill require field(s).')
+            }
+        }
+
+        function requiredValidation(field){
+            return userEdit.userForm.$submitted && field.$dirty && field.$invalid;
         }
 
         function $onInit(){

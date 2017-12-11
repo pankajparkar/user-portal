@@ -7,7 +7,8 @@
         controllerAs: 'userList',
         bindings: {
             users: '<',
-            showUserDetails: '&'
+            showUserDetails: '&',
+            removeUser: '&'
         }
     });
     

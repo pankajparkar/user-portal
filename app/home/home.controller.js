@@ -17,12 +17,23 @@
         home.$onInit = $onInit;
         home.openUserDetails = openUserDetails;
         home.filterChanged = filterChanged;
+        home.removeUser = removeUser;
 
         function getUsers(){
             return userService.getUsers().then(function(users){
                 usersCopy = angular.copy(users);
                 home.users = users;
             });
+        }
+
+        function removeUser(user){
+            //TODO
+            //userService.removeUser()
+            //this is for local simulation
+            home.users = home.users.filter(function(item){
+                return item.Id !== user.Id;
+            });
+            alert("Record deleted succefully.");
         }
 
         function filterName(name){
