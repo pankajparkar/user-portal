@@ -20,7 +20,7 @@
                                 </label>
                             </div>
                             <div class="col-sm-12">
-                                <input name="firstName" ng-model="userEdit.user.FirstName" required/>
+                                <input class="form-control input-sm" name="firstName" ng-model="userEdit.user.FirstName" required/>
                             </div>
                             <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.firstName)">
                                 <div class="alert alert-danger" role="alert">
@@ -39,7 +39,7 @@
                                 </label>
                             </div>
                             <div class="col-sm-12">
-                                <input name="lastName" ng-model="userEdit.user.LastName" required/>
+                                <input class="form-control input-sm" name="lastName" ng-model="userEdit.user.LastName" required/>
                             </div>
                             <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.lastName)">
                                 <div class="alert alert-danger" role="alert">
@@ -73,7 +73,7 @@
                     <div class="col-sm-12">
                         <label>Date of Birth*</label>
                         <!-- TODO: Conver it to dropdown -->
-                        <input type="date" placeholder="Date of birth"/>
+                        <input class="form-control input-sm" type="date" placeholder="Date of birth"/>
                     </div>
                     <!-- <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.dateOfBirth)">
                         <div class="alert alert-danger" role="alert">
@@ -86,7 +86,7 @@
                 <div class="row margin-bottom-5">
                     <div class="col-sm-12">
                         <label>Email Id*</label>
-                        <input type="email" name="email" class="form-control" ng-model="userEdit.user.Email" required />
+                        <input class="form-control input-sm" type="email" name="email" class="form-control" ng-model="userEdit.user.Email" required />
                     </div>
                     <div class="col-sm-12" ng-if="userEdit.requiredValidation(userEdit.userForm.email)">
                         <div class="alert alert-danger" role="alert">
@@ -133,15 +133,15 @@
                         <label>Department</label>
                     </div>
                     <div class="col-sm-8">
-                        <select name="department" ng-model="userEdit.user.Department"
+                        <select class="form-control" name="department" ng-model="userEdit.user.Department"
                             ng-options="department.Name as department.Name for department in userEdit.departments track by department.Name" required>
                             <option>Please select Department</option>
                         </select>
                     </div>
                 </div>
                 <div class="row margin-bottom-5">
-                    <button type="submit">Save</button>
-                    <button ui-sref="user">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                    <button class="btn btn-danger" ui-sref="user">Cancel</button>
                 </div>
             </form>
         </div>
